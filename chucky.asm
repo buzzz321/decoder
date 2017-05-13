@@ -59,7 +59,7 @@ decloop:
 
     section .data
 message:
-	        db      "Hello, World", 10      ; note the newline at the end
+	        db      "Hello, World", newline      ; note the newline at the end
 
 secret: db 10110111b, 10111010b, 10110101b
 	db 10111011b, 10111010b, 10101011b
@@ -75,4 +75,4 @@ secret: db 10110111b, 10111010b, 10110101b
 secend: db 0
 
 plaintext:  times secend-secret db 0
-plainend:   db 10,0
+plainend:   db newline,0
