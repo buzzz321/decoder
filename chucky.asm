@@ -1,5 +1,5 @@
-	    ;;  nasm -felf64 chucky.s
-	    ;;  ld chucky.o
+	    ;;  nasm -felf64 -g -F dwarf chucky.asm
+	    ;;  ld chucky.o -o chucky
 
 	sys_exit        equ     1
 	sys_write       equ     1
