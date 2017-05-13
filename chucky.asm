@@ -44,8 +44,8 @@ decode:
     mov rsi, plaintext          ; output buffer
 
 decloop:    
-    mov rax, [rdi + rcx - 1]    ; get a byte
-    not rax                     ; decode...
+    mov al, [rdi + rcx - 1]    ; get a byte
+    not al                     ; decode...
     and rax, 0xff               ; mask
     mov [rsi + rcx - 1], al     ; save if
     dec rcx
